@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Academics - Violan SkillBridge Arena</title>
+<title>Violan SkillBridge Arena</title>
 
 <style>
 body {
@@ -12,16 +12,25 @@ body {
     color: white;
 }
 
-header {
-    background: #020c1b;
+/* HERO BANNER */
+.hero {
+    background: linear-gradient(rgba(2,12,27,0.8), rgba(2,12,27,0.8)),
+    url('https://images.unsplash.com/photo-1523240795612-9a054b0db644');
+    background-size: cover;
     text-align: center;
-    padding: 15px;
+    padding: 80px 20px;
 }
 
-header h1 {
+.hero h1 {
     color: #64ffda;
+    font-size: 40px;
 }
 
+.hero p {
+    font-size: 18px;
+}
+
+/* NAV */
 nav {
     background: #112240;
     text-align: center;
@@ -38,6 +47,7 @@ nav a:hover {
     background: #233554;
 }
 
+/* SECTION */
 .section {
     padding: 20px;
     border-bottom: 1px solid #233554;
@@ -47,11 +57,20 @@ h2, h3 {
     color: #64ffda;
 }
 
+/* SUBJECT BOX */
+.box {
+    background: #112240;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+
+/* QUIZ */
 .quiz-box {
     background: #112240;
     padding: 15px;
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 button {
@@ -67,9 +86,24 @@ button:hover {
     background: #52e0c4;
 }
 
+/* LOGIN */
+.login-box {
+    background: #112240;
+    padding: 20px;
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 8px;
+    text-align: center;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
 #result {
-    margin-top: 15px;
-    font-size: 18px;
+    margin-top: 10px;
     color: #64ffda;
 }
 
@@ -83,30 +117,56 @@ footer {
 
 <body>
 
-<header>
-    <h1>Violan SkillBridge Arena - Academics</h1>
-</header>
+<!-- HERO -->
+<div class="hero">
+    <h1>Violan SkillBridge Arena</h1>
+    <p>Learn • Grow • Succeed</p>
+</div>
 
+<!-- LOGIN -->
+<div class="section">
+    <h2>Student Login</h2>
+
+    <div class="login-box">
+        <input type="text" id="username" placeholder="Username"><br>
+        <input type="password" id="password" placeholder="Password"><br>
+        <button onclick="login()">Login</button>
+        <p id="loginMsg"></p>
+    </div>
+</div>
+
+<!-- NAV -->
 <nav>
-    <a href="index.html">Home</a>
-    <a href="sports.html">Sports</a>
-    <a href="academics.html">Academics</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="#">Home</a>
+    <a href="#subjects">Subjects</a>
+    <a href="#quiz">Quiz</a>
 </nav>
 
-<div class="section">
-    <h2>Quick Interactive Quiz</h2>
+<!-- SUBJECTS -->
+<div class="section" id="subjects">
+    <h2>All Subjects</h2>
 
-    <!-- Question 1 -->
+    <div class="box">Mathematics - Solve equations, algebra, geometry</div>
+    <div class="box">English - Grammar, comprehension, writing skills</div>
+    <div class="box">Biology - Living things, systems, diagrams</div>
+    <div class="box">Chemistry - Reactions, formulas, experiments</div>
+    <div class="box">Physics - Forces, motion, energy, calculations</div>
+    <div class="box">Geography - Maps, climate, landforms</div>
+    <div class="box">History - Events, timelines, leaders</div>
+    <div class="box">Computer Studies - Coding, typing, software skills</div>
+</div>
+
+<!-- QUIZ -->
+<div class="section" id="quiz">
+    <h2>Interactive Quiz</h2>
+
     <div class="quiz-box">
-        <p>1. What is 12 × 8?</p>
+        <p>1. 12 × 8 = ?</p>
         <label><input type="radio" name="q1" value="a"> 96</label><br>
         <label><input type="radio" name="q1" value="b"> 88</label><br>
         <label><input type="radio" name="q1" value="c"> 108</label>
     </div>
 
-    <!-- Question 2 -->
     <div class="quiz-box">
         <p>2. Capital city of Uganda?</p>
         <label><input type="radio" name="q2" value="a"> Nairobi</label><br>
@@ -114,12 +174,11 @@ footer {
         <label><input type="radio" name="q2" value="c"> Kigali</label>
     </div>
 
-    <!-- Question 3 -->
     <div class="quiz-box">
-        <p>3. Which subject studies living things?</p>
-        <label><input type="radio" name="q3" value="a"> Physics</label><br>
-        <label><input type="radio" name="q3" value="b"> Biology</label><br>
-        <label><input type="radio" name="q3" value="c"> Geography</label>
+        <p>3. Biology studies?</p>
+        <label><input type="radio" name="q3" value="a"> Plants and animals</label><br>
+        <label><input type="radio" name="q3" value="b"> Stars</label><br>
+        <label><input type="radio" name="q3" value="c"> Money</label>
     </div>
 
     <button onclick="checkAnswers()">Submit Quiz</button>
@@ -132,6 +191,19 @@ footer {
 </footer>
 
 <script>
+// LOGIN SYSTEM (simple demo)
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if (user === "student" && pass === "1234") {
+        document.getElementById("loginMsg").innerHTML = "Login successful 🎉 Welcome " + user;
+    } else {
+        document.getElementById("loginMsg").innerHTML = "Invalid login ❌ Try student / 1234";
+    }
+}
+
+// QUIZ SYSTEM
 function checkAnswers() {
     let score = 0;
 
@@ -141,18 +213,14 @@ function checkAnswers() {
 
     if (q1 && q1.value === "a") score++;
     if (q2 && q2.value === "b") score++;
-    if (q3 && q3.value === "b") score++;
+    if (q3 && q3.value === "a") score++;
 
     let result = document.getElementById("result");
-    result.innerHTML = "You scored " + score + " out of 3 🎯";
+    result.innerHTML = "You scored " + score + " / 3 🎯";
 
-    if (score === 3) {
-        result.innerHTML += " - Excellent!";
-    } else if (score === 2) {
-        result.innerHTML += " - Good job!";
-    } else {
-        result.innerHTML += " - Keep practicing!";
-    }
+    if (score === 3) result.innerHTML += " - Excellent!";
+    else if (score === 2) result.innerHTML += " - Good job!";
+    else result.innerHTML += " - Keep practicing!";
 }
 </script>
 
