@@ -1,8 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Academics</title>
-<link rel="stylesheet" href="style.css">
+<title>Academics | Violan SkillBridge Arena</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0a192f;
+  color:white;
+}
+
+/* HEADER */
+header{
+  background:#020c1b;
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  color:#64ffda;
+  font-weight:bold;
+}
+
+nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+}
+
+nav a:hover{
+  color:#64ffda;
+}
+
+/* HERO */
+.hero{
+  height:250px;
+  background:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=80');
+  background-size:cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  font-weight:bold;
+}
+
+/* SECTION */
+.section{
+  padding:40px;
+}
+
+.section-title{
+  text-align:center;
+  color:#64ffda;
+  margin-bottom:30px;
+}
+
+/* GRID */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* CARD */
+.card{
+  background:#112240;
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.03);
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:15px;
+}
+
+.card h3{
+  color:#64ffda;
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:14px;
+  color:#ccd6f6;
+  line-height:1.5;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#020c1b;
+  margin-top:40px;
+  color:#8892b0;
+}
+</style>
+
 </head>
 
 <body>
@@ -19,18 +124,68 @@
   </nav>
 </header>
 
-<section class="section">
-  <h2 class="section-title">Academic Growth</h2>
+<div class="hero">
+ACADEMIC GROWTH & LEARNING
+</div>
 
-  <div class="cards">
-    <div class="card">Mathematics</div>
-    <div class="card">Science</div>
-    <div class="card">ICT Skills</div>
-    <div class="card">Languages</div>
+<section class="section">
+
+<h2 class="section-title">Our Academic Programs</h2>
+
+<div class="cards">
+
+  <!-- MATHEMATICS -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80">
+    <div class="card-content">
+      <h3>Mathematics</h3>
+      <p>
+        Learn problem solving, algebra, geometry, and logical thinking.
+        Mathematics builds strong analytical skills for life and careers.
+      </p>
+    </div>
   </div>
+
+  <!-- SCIENCE -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80">
+    <div class="card-content">
+      <h3>Science</h3>
+      <p>
+        Explore biology, chemistry, and physics through experiments and real-life applications.
+      </p>
+    </div>
+  </div>
+
+  <!-- ICT -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80">
+    <div class="card-content">
+      <h3>ICT Skills</h3>
+      <p>
+        Learn computer basics, coding, web development, and digital literacy skills.
+      </p>
+    </div>
+  </div>
+
+  <!-- LANGUAGES -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80">
+    <div class="card-content">
+      <h3>Languages</h3>
+      <p>
+        Improve communication skills in English and other languages for global success.
+      </p>
+    </div>
+  </div>
+
+</div>
+
 </section>
 
-<footer>© 2026 Violan SkillBridge Arena</footer>
+<footer>
+© 2026 Violan SkillBridge Arena | Knowledge Builds Your Future
+</footer>
 
 </body>
 </html>
