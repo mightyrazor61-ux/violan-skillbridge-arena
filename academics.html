@@ -2,82 +2,49 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Violan SkillBridge Arena</title>
+<title>S.4 & S.6 Multilingual Exam</title>
 
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0a192f;
+    font-family: Arial;
+    background: #0a192f;
     color: white;
 }
 
-/* HERO BANNER */
-.hero {
-    background: linear-gradient(rgba(2,12,27,0.8), rgba(2,12,27,0.8)),
-    url('https://images.unsplash.com/photo-1523240795612-9a054b0db644');
-    background-size: cover;
+header {
+    background: #020c1b;
+    padding: 15px;
     text-align: center;
-    padding: 80px 20px;
 }
 
-.hero h1 {
+h1 {
     color: #64ffda;
-    font-size: 40px;
 }
 
-.hero p {
-    font-size: 18px;
-}
-
-/* NAV */
-nav {
-    background: #112240;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    padding: 12px 18px;
-    display: inline-block;
-    text-decoration: none;
-}
-
-nav a:hover {
-    background: #233554;
-}
-
-/* SECTION */
 .section {
+    width: 85%;
+    margin: auto;
     padding: 20px;
+}
+
+.exam-box {
+    background: #112240;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.question {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #233554;
 }
 
-h2, h3 {
-    color: #64ffda;
-}
-
-/* SUBJECT BOX */
-.box {
-    background: #112240;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 6px;
-}
-
-/* QUIZ */
-.quiz-box {
-    background: #112240;
-    padding: 15px;
-    margin-top: 10px;
-    border-radius: 6px;
-}
-
 button {
-    margin-top: 15px;
-    padding: 10px 15px;
     background: #64ffda;
     border: none;
+    padding: 10px 15px;
     cursor: pointer;
     font-weight: bold;
 }
@@ -86,141 +53,128 @@ button:hover {
     background: #52e0c4;
 }
 
-/* LOGIN */
-.login-box {
-    background: #112240;
-    padding: 20px;
-    width: 300px;
-    margin: 20px auto;
-    border-radius: 8px;
+#timer {
+    font-size: 22px;
+    color: #ff4d4d;
     text-align: center;
-}
-
-input {
-    width: 90%;
-    padding: 10px;
-    margin: 8px 0;
 }
 
 #result {
-    margin-top: 10px;
-    color: #64ffda;
-}
-
-footer {
-    background: #020c1b;
     text-align: center;
-    padding: 10px;
+    font-size: 20px;
+    color: #64ffda;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>Violan SkillBridge Arena</h1>
-    <p>Learn • Grow • Succeed</p>
-</div>
+<header>
+    <h1>Violan SkillBridge Arena - Multilingual Exams</h1>
+    <div id="timer">Time Left: 120s</div>
+</header>
 
-<!-- LOGIN -->
 <div class="section">
-    <h2>Student Login</h2>
 
-    <div class="login-box">
-        <input type="text" id="username" placeholder="Username"><br>
-        <input type="password" id="password" placeholder="Password"><br>
-        <button onclick="login()">Login</button>
-        <p id="loginMsg"></p>
+<!-- S4 EXAM -->
+<h2>S.4 Exam</h2>
+
+<div class="exam-box">
+
+    <div class="question">
+        <p>EN: What is 12 × 8?</p>
+        <p>FR: Combien fait 12 × 8 ?</p>
+        <p>SW: 12 × 8 ni kiasi gani?</p>
+        <p>LG: 12 × 8 kye ki?</p>
+
+        <label><input type="radio" name="s4q1" value="a"> 96</label><br>
+        <label><input type="radio" name="s4q1" value="b"> 88</label><br>
+        <label><input type="radio" name="s4q1" value="c"> 108</label>
+    </div>
+
+    <div class="question">
+        <p>EN: Capital of Uganda?</p>
+        <p>FR: Capitale de l'Ouganda ?</p>
+        <p>SW: Mji mkuu wa Uganda?</p>
+        <p>LG: Ekibuga kya Uganda?</p>
+
+        <label><input type="radio" name="s4q2" value="a"> Nairobi</label><br>
+        <label><input type="radio" name="s4q2" value="b"> Kampala</label><br>
+        <label><input type="radio" name="s4q2" value="c"> Kigali</label>
     </div>
 </div>
 
-<!-- NAV -->
-<nav>
-    <a href="#">Home</a>
-    <a href="#subjects">Subjects</a>
-    <a href="#quiz">Quiz</a>
-</nav>
+<!-- S6 EXAM -->
+<h2>S.6 Exam</h2>
 
-<!-- SUBJECTS -->
-<div class="section" id="subjects">
-    <h2>All Subjects</h2>
+<div class="exam-box">
 
-    <div class="box">Mathematics - Solve equations, algebra, geometry</div>
-    <div class="box">English - Grammar, comprehension, writing skills</div>
-    <div class="box">Biology - Living things, systems, diagrams</div>
-    <div class="box">Chemistry - Reactions, formulas, experiments</div>
-    <div class="box">Physics - Forces, motion, energy, calculations</div>
-    <div class="box">Geography - Maps, climate, landforms</div>
-    <div class="box">History - Events, timelines, leaders</div>
-    <div class="box">Computer Studies - Coding, typing, software skills</div>
+    <div class="question">
+        <p>EN: Biology studies what?</p>
+        <p>FR: La biologie étudie quoi ?</p>
+        <p>SW: Biolojia husoma nini?</p>
+        <p>LG: Biology etunula ki?</p>
+
+        <label><input type="radio" name="s6q1" value="a"> Living things</label><br>
+        <label><input type="radio" name="s6q1" value="b"> Stars</label><br>
+        <label><input type="radio" name="s6q1" value="c"> Money</label>
+    </div>
+
+    <div class="question">
+        <p>EN: Physics deals with?</p>
+        <p>FR: La physique traite de quoi ?</p>
+        <p>SW: Fizikia hushughulika na nini?</p>
+        <p>LG: Physics etalina ki?</p>
+
+        <label><input type="radio" name="s6q2" value="a"> Matter & energy</label><br>
+        <label><input type="radio" name="s6q2" value="b"> Poems</label><br>
+        <label><input type="radio" name="s6q2" value="c"> Money</label>
+    </div>
+
 </div>
 
-<!-- QUIZ -->
-<div class="section" id="quiz">
-    <h2>Interactive Quiz</h2>
+<button onclick="submitExam()">Submit Exam</button>
 
-    <div class="quiz-box">
-        <p>1. 12 × 8 = ?</p>
-        <label><input type="radio" name="q1" value="a"> 96</label><br>
-        <label><input type="radio" name="q1" value="b"> 88</label><br>
-        <label><input type="radio" name="q1" value="c"> 108</label>
-    </div>
+<div id="result"></div>
 
-    <div class="quiz-box">
-        <p>2. Capital city of Uganda?</p>
-        <label><input type="radio" name="q2" value="a"> Nairobi</label><br>
-        <label><input type="radio" name="q2" value="b"> Kampala</label><br>
-        <label><input type="radio" name="q2" value="c"> Kigali</label>
-    </div>
-
-    <div class="quiz-box">
-        <p>3. Biology studies?</p>
-        <label><input type="radio" name="q3" value="a"> Plants and animals</label><br>
-        <label><input type="radio" name="q3" value="b"> Stars</label><br>
-        <label><input type="radio" name="q3" value="c"> Money</label>
-    </div>
-
-    <button onclick="checkAnswers()">Submit Quiz</button>
-
-    <div id="result"></div>
 </div>
-
-<footer>
-    <p>© 2026 Violan SkillBridge Arena</p>
-</footer>
 
 <script>
-// LOGIN SYSTEM (simple demo)
-function login() {
-    let user = document.getElementById("username").value;
-    let pass = document.getElementById("password").value;
+let timeLeft = 120;
 
-    if (user === "student" && pass === "1234") {
-        document.getElementById("loginMsg").innerHTML = "Login successful 🎉 Welcome " + user;
-    } else {
-        document.getElementById("loginMsg").innerHTML = "Invalid login ❌ Try student / 1234";
+let timer = setInterval(() => {
+    timeLeft--;
+    document.getElementById("timer").innerHTML = "Time Left: " + timeLeft + "s";
+
+    if (timeLeft <= 0) {
+        clearInterval(timer);
+        submitExam();
     }
-}
+}, 1000);
 
-// QUIZ SYSTEM
-function checkAnswers() {
+function submitExam() {
     let score = 0;
 
-    let q1 = document.querySelector('input[name="q1"]:checked');
-    let q2 = document.querySelector('input[name="q2"]:checked');
-    let q3 = document.querySelector('input[name="q3"]:checked');
+    // S4
+    let s4q1 = document.querySelector('input[name="s4q1"]:checked');
+    let s4q2 = document.querySelector('input[name="s4q2"]:checked');
 
-    if (q1 && q1.value === "a") score++;
-    if (q2 && q2.value === "b") score++;
-    if (q3 && q3.value === "a") score++;
+    // S6
+    let s6q1 = document.querySelector('input[name="s6q1"]:checked');
+    let s6q2 = document.querySelector('input[name="s6q2"]:checked');
 
-    let result = document.getElementById("result");
-    result.innerHTML = "You scored " + score + " / 3 🎯";
+    if (s4q1 && s4q1.value === "a") score++;
+    if (s4q2 && s4q2.value === "b") score++;
+    if (s6q1 && s6q1.value === "a") score++;
+    if (s6q2 && s6q2.value === "a") score++;
 
-    if (score === 3) result.innerHTML += " - Excellent!";
-    else if (score === 2) result.innerHTML += " - Good job!";
-    else result.innerHTML += " - Keep practicing!";
+    document.getElementById("result").innerHTML =
+        "Exam Finished 🎯 Score: " + score + " / 4";
+
+    clearInterval(timer);
+
+    let inputs = document.querySelectorAll("input");
+    inputs.forEach(i => i.disabled = true);
 }
 </script>
 
