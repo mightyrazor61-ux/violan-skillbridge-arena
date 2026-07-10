@@ -176,6 +176,54 @@ nav{
 
 .hero-content h1{
     font-size:2rem;
+}/* Attractive Logo */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    border:3px solid #FFD700;
+    background:#fff;
+    object-fit:cover;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    transition:0.4s ease;
+}
+
+.logo img:hover{
+    transform:rotate(8deg) scale(1.08);
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.logo-text h2{
+    margin:0;
+    font-size:34px;
+    font-weight:900;
+    color:#FFD700;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    line-height:1;
+    text-shadow:
+        2px 2px 5px rgba(0,0,0,0.5),
+        0 0 10px rgba(255,215,0,0.5);
+}
+
+.logo-text span{
+    margin-top:4px;
+    color:#ffffff;
+    font-size:14px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:2px;
 }
 
 }
